@@ -279,7 +279,7 @@ function buildpage() {
           for (unit in data.results[a].units) {
               has_units = true;
               if(data.results[a].units[unit].description) {
-                  new_html += data.results[a].units[unit].description + ', ';
+                  new_html += '<a href="/unit/' + data.results[a].units[unit].dec_id + '/">' + data.results[a].units[unit].description + '</a>, ';
               } else {
                   if(js_config.radio_change_unit) {
                       //new_html += '?<a href="/admin/radio/unit/' + data.results[a].units[unit].pk + '/change/">' + data.results[a].units[unit].dec_id + '</a>, ';

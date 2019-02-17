@@ -37,6 +37,7 @@ urlpatterns = [
     url('^', include('django.contrib.auth.urls')),
     url(r'^accounts/', include('allauth.urls')),
     url(r'^api_v1/unit/(?P<filter_val>[+\w-]+)/$', views.UnitFilterViewSet.as_view()),
+    url(r'^api_v1/rid/(?P<filter_val>[+\w-]+)/$', views.UnitFilterViewSet.as_view()),
     url(r'^api_v1/tg/(?P<filter_val>[+\w-]+)/$', views.TalkGroupFilterViewSet.as_view()),
     url(r'^api_v1/scan/(?P<filter_val>[+\w-]+)/$', views.ScanViewSet.as_view()),
     url(r'^api_v1/inc/(?P<filter_val>[+\w-]+)/$', views.IncViewSet.as_view()),
